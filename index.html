@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ипотечный калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="headerInfo">
+            <h1>Ипотечный калькулятор</h1>
+            <p>Узнайте примерный платёж, ставку и другие предварительные условия по ипотеке</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="hypothecRange">
+            <select id="hypothecSelect">
+                <option>Квартира в новостройке</option>
+                <option>Квартира на вторичном рынке</option>
+                <option>Купить дом</option>
+                <option>Построить дом</option>
+                <option>Рефинансирование</option>
+                <option>Машино-место, гараж</option>
+            </select>
+            <p>Стоимость недвижимости:</p>
+            <input value="45000" type="number" class="amount">
+            <p class="estateValueInfo"></p>
+            <p>Первоначальный взнос:</p>
+            <input value="0" type="number" class="estateValue">
+            <p>Процентная ставка:</p>
+            <input value="12" type="number" class="rate">
+            <p>Срок кредита:</p>
+            <input value="10" type="number" class="period">
+        </div>
+        <div class="hypothecInfo">
+            <div class="payInfo">
+                <p>Ежемесячный платеж: <span id="monthlyPayment"></span></p>
+                <p>Сумма кредита: <span id="creditAmount"></span></p>
+                <p>Процентная ставка: <span id="interestRate"></span></p>
+                <p>Налоговый вычет: <span id="taxDeduction"></span></p>
+                <p>Переплата: <span id="overpayment"></span></p>
+            </div>
+            <div class="payChart"></div>
+            <button id="hypothecBtn">Рассчитать</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
