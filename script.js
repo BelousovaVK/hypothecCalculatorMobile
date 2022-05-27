@@ -1,4 +1,4 @@
-const hypothecBtn = document.getElementById('hypothecBtn');
+const hypothecBtn = document.querySelector(".hypothecBtn");
 
 /*Ежемесячный платеж*/
 function month(credSum_arg,rate_arg,period_arg) {
@@ -43,7 +43,6 @@ hypothecBtn.addEventListener("click", e=>{
     /*Вывод данных*/
     document.getElementById('monthlyPayment').innerHTML = month(credSum, rate, period);
     document.getElementById('creditAmount').innerHTML = credit(credSum);
-    document.getElementById('interestRate').innerHTML = interestRate(rate);
     document.getElementById('taxDeduction').innerHTML = tax(amount);
     document.getElementById('overpayment').innerHTML = over(credSum, rate, period, amount);
 })

@@ -7,52 +7,110 @@ h1{
 }
 
 p{
-    font-size: 20px;
-}
-
-.header{
-    width: 100%;
-    background-color: #f0f3f6;
-    padding: 2%;
-    padding-left: 10%;
-}
-
-
-.main{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 32px;
-    margin: auto;
-    margin-top: 50px;
-}
-
-.hypothecRange{
-    width: 50%;
-}
-
-#hypothecSelect{
-    height: 50px;
-    width: 90%;
-    font-size: 20px;
-}
-
-input{
-    width: 90%;
-}
-
-#hypothecBtn{
-    width: 300px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: #242629;
     font-size: 18px;
+    font-style: bold;
+    font-weight: 700;
+    color: #424242;
+}
+
+span{
+    font-size: 41px;
+    font-weight: 700;
+    font-style: bold;
+}
+.hide{
+    display: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url(backgroundimg.png);
+}
+
+.hypothecBtn{
+    width: 300px;
+    height: 75px;
+    border-radius: 20px;
+    background-color: #AB5F5F;
+    font-size: 40px;
+    font-style: bold;
     font-family: SeroPro,sans-serif;
     color: #fff;
 }
 
-#hypothecBtn:hover{
-    background-color: rgb(0, 123, 255);
+.hypothecBtn:hover{
+    background-color: rgb(45, 45, 45);
 }
+
+.main{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.hypothecHead{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hypothecH1{
+    font-size: 64px;
+    color: #360606;
+    text-align: center;
+    font-style: bold;
+}
+
+.hypothecWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.hypothecRange, .hypothecInfo{
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.71);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.hypothecSelect{
+    margin-bottom: 40px;
+}
+
+input{
+    width: 100%;
+    height: 42px;
+    background-color: #AEAEAE;
+    margin: none;
+    font-size: 18px;
+    font-style: bold;
+    font-weight: 700;
+    color: #424242;
+    border: none;
+    padding: 5px;
+}
+
+.payInfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.infoSelect{
+    width: 40%;
+    background-color: rgba(255, 248, 248, 0.6);
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+/*мобильная версия*/
