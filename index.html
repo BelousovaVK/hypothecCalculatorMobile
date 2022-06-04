@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ипотечный калькулятор</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="hypothecHead">
-            <h1 class="hypothecH1">Ипотечный калькулятор</h1>
-            <button class="hypothecBtn">Рассчитать</button>
-        </div>
-        <div class="hypothecWrapper">
-            <div class="hypothecRange">
-                <div class="hypothecSelect">
-                    <p>Стоимость недвижимости:</p>
-                    <input value="45000" type="number" class="amount">
-                </div>
-                <div class="hypothecSelect">
-                    <p>Первоначальный взнос:</p>
-                    <input value="0" type="number" class="estateValue">
-                </div>
-                <div class="hypothecSelect">
-                    <p>Процентная ставка:</p>
-                    <input value="12" type="number" class="rate">
-                </div>
-                <div class="hypothecSelect">
-                    <p>Срок кредита:</p>
-                    <input value="10" type="number" class="period">
-                </div>
+      <div class="hypothecHead">
+        <h1 class="hypothecH1">Ипотечный калькулятор</h1>
+        <button class="hypothecBtn hidden">Рассчитать</button>
+      </div>
+      <div class="hypothecWrapper">
+        <div class="wrapperHeight">
+          <div class="hypothecRange">
+            <div class="hypothecSelect">
+              <p>Стоимость недвижимости:</p>
+              <input value="45000" type="number" class="amount" />
             </div>
-            <div class="hypothecInfo">
-                <div class="payInfo">
-                    <div class="infoSelect">
-                        <p>Ежемесячный платеж: <br> <span id="monthlyPayment"></span></p>
-                    </div>
-                    <div class="infoSelect">
-                        <p>Сумма кредита: <br> <span id="creditAmount"></span></p>
-                    </div>
-                    <div class="infoSelect">
-                        <p>Налоговый вычет: <br> <span id="taxDeduction"></span></p>
-                    </div>
-                    <div class="infoSelect">
-                        <p>Переплата: <br> <span id="overpayment"></span></p>
-                    </div>
-                </div>
+            <div class="hypothecSelect">
+              <p>Первоначальный взнос:</p>
+              <input value="0" type="number" class="estateValue" />
             </div>
+            <div class="hypothecSelect">
+              <p>Процентная ставка:</p>
+              <input value="12" type="number" class="rate" />
+            </div>
+            <div class="hypothecSelect">
+              <p>Срок кредита:</p>
+              <input value="10" type="number" class="period" />
+            </div>
+          </div>
+          <button class="hypothecBtn hideBtn">Рассчитать</button>
         </div>
+        <div class="wrapperHeight">
+          <div class="hypothecInfo">
+            <div class="payInfo">
+              <div class="infoSelect">
+                <p>
+                  Ежемесячный платеж: <br/>
+                  <span id="monthlyPayment"></span>
+                </p>
+              </div>
+              <div class="infoSelect">
+                <p>
+                  Сумма кредита: <br/>
+                  <span id="creditAmount"></span>
+                </p>
+              </div>
+              <div class="infoSelect">
+                <p>
+                  Налоговый вычет: <br/>
+                  <span id="taxDeduction"></span>
+                </p>
+              </div>
+              <div class="infoSelect">
+                <p>
+                  Переплата: <br/>
+                  <span id="overpayment"></span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <button class="hypothecBtn hide">Рассчитать</button>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

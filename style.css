@@ -1,116 +1,186 @@
-h1, p{
-    font-family: SBSansDisplay,OpenSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+h1,
+p,
+span {
+  font-family: SBSansDisplay, OpenSans, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
 }
 
-h1{
-    font-size: 48px;
+h1 {
+  font-size: 48px;
 }
 
-p{
-    font-size: 18px;
-    font-style: bold;
-    font-weight: 700;
-    color: #424242;
+p {
+  font-size: 20px;
+  font-style: bold;
+  font-weight: 700;
+  color: #424242;
 }
 
-span{
-    font-size: 41px;
-    font-weight: 700;
-    font-style: bold;
+span {
+  font-size: 48px;
+  font-weight: 700;
+  font-style: bold;
 }
-.hide{
-    display: none;
-}
-
-body{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-image: url(backgroundimg.png);
+.hideBtn {
+  display: none;
 }
 
-.hypothecBtn{
-    width: 300px;
-    height: 75px;
-    border-radius: 20px;
-    background-color: #AB5F5F;
-    font-size: 40px;
-    font-style: bold;
-    font-family: SeroPro,sans-serif;
-    color: #fff;
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url(backgroundimg.png);
+  overflow: hidden;
 }
 
-.hypothecBtn:hover{
-    background-color: rgb(45, 45, 45);
+.hypothecBtn {
+  width: 300px;
+  height: 75px;
+  border-radius: 20px;
+  background-color: #ab5f5f;
+  font-size: 40px;
+  font-style: bold;
+  font-family: SBSansDisplay, OpenSans, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  color: #fff;
 }
 
-.main{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
+.hypothecBtn:hover {
+  background-color: rgb(45, 45, 45);
 }
 
-.hypothecHead{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.main {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
 }
 
-.hypothecH1{
-    font-size: 64px;
-    color: #360606;
-    text-align: center;
-    font-style: bold;
+.hypothecHead {
+  width: 40%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hypothecWrapper{
-    display: flex;
-    flex-direction: column;
+.hypothecH1 {
+  font-size: 64px;
+  color: #360606;
+  text-align: center;
+  font-style: bold;
 }
 
-.hypothecRange, .hypothecInfo{
-    width: 600px;
-    background-color: rgba(255, 255, 255, 0.71);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
+.hypothecWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 300vh;
 }
 
-.hypothecSelect{
-    margin-bottom: 40px;
+.wrapperHeight {
+  height: 100vh;
 }
 
-input{
-    width: 100%;
-    height: 42px;
-    background-color: #AEAEAE;
-    margin: none;
-    font-size: 18px;
-    font-style: bold;
-    font-weight: 700;
-    color: #424242;
-    border: none;
-    padding: 5px;
+.hypothecRange,
+.hypothecInfo {
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.71);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  margin-top: 25%;
+  margin-left: 20%;
+  transition: 2s;
 }
 
-.payInfo{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.hypothecMargin {
+  margin-top: -97vh;
 }
 
-.infoSelect{
-    width: 40%;
-    background-color: rgba(255, 248, 248, 0.6);
-    border-radius: 20px;
-    text-align: center;
-    margin: 10px;
+.hypothecSelect {
+  margin-bottom: 40px;
+}
+
+input {
+  width: 100%;
+  height: 42px;
+  background-color: #aeaeae;
+  margin: none;
+  font-size: 18px;
+  font-style: bold;
+  font-weight: 700;
+  color: #424242;
+  border: none;
+  padding: 5px;
+}
+
+.payInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.infoSelect {
+  width: 46%;
+  background-color: rgba(255, 248, 248, 0.6);
+  border-radius: 20px;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
 }
 
 /*мобильная версия*/
+@media (max-width: 1280px) {
+  .hypothecRange,
+  .hypothecInfo {
+    width: 400px;
+  }
+
+  .infoSelect {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .hypothecHead {
+    width: 30%;
+    margin-left: 0;
+    margin-top: 20%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .hideBtn {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .hypothecWrapper {
+    height: 100vh;
+    width: 300vw;
+  }
+
+  .wrapperHeight {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .hypothecRange,
+  .hypothecInfo {
+    width: 90%;
+    margin: auto;
+  }
+
+  .hypothecRange {
+    margin-left: 0;
+  }
+}
